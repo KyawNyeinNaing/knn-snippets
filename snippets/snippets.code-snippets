@@ -1,0 +1,408 @@
+{
+  "importDestructing": {
+    "prefix": "_syimd",
+    "body": "import { $2 } from '${1:module}'$0"
+  },
+  "importEverything": {
+    "prefix": "_syime",
+    "body": "import * as ${2:alias} from '${1:module}'$0"
+  },
+  "importAs": {
+    "prefix": "_syima",
+    "body": "import { ${2:originalName} as ${3:alias} } from '${1:module}'$0"
+  },
+  "destructingObject": {
+    "prefix": "_sydo",
+    "body": "const {${2:propertyName}} = ${1:objectToDestruct}",
+    "description": "Creates and assigns a local variable using object destructing"
+  },
+  "destructingArray": {
+    "prefix": "_syda",
+    "body": "const [${2:propertyName}] = ${1:arrayToDestruct}",
+    "description": "Creates and assigns a local variable using array destructing"
+  },
+  "setTimeOut": {
+    "prefix": "_systo",
+    "body": ["setTimeout(() => {", "\t${2}", "}, ${1:delayInms})", ""],
+    "description": "Executes the given function after the specified delay in ES7 syntax"
+  },
+  "import React": {
+    "prefix": "_syimr",
+    "body": ["import React from 'react'", ""]
+  },
+  "import React, { Component }": {
+    "prefix": "_syimrc",
+    "body": ["import React, { Component } from 'react'", ""]
+  },
+  "import React, { Component } & PropTypes": {
+    "prefix": "_syimrcp",
+    "body": [
+      "import React, { Component } from 'react'",
+      "import PropTypes from 'prop-types'",
+      ""
+    ]
+  },
+  "import React, { useState }": {
+    "prefix": "_syimrs",
+    "body": ["import React, { useState } from 'react'", ""]
+  },
+  "import React, { useEffect }": {
+    "prefix": "_syimre",
+    "body": ["import React, { useEffect } from 'react'", ""]
+  },
+  "import React, { useRef }": {
+    "prefix": "_syimre",
+    "body": ["import React, { useRef } from 'react'", ""]
+  },
+  "import React, { useState, useEffect }": {
+    "prefix": "_syimrse",
+    "body": ["import React, { useState, useEffect } from 'react'", ""]
+  },
+  "import React Router": {
+    "prefix": "_syimrr",
+    "body": [
+      "import { BrowserRouter as Router, Route, Switch, Link, NavLink } from 'react-router-dom'",
+      ""
+    ]
+  },
+
+  "reactFunctionalExportComponent": {
+    "prefix": "_syrfce",
+    "body": [
+      "import React from 'react'",
+      "",
+      "function ${1:${TM_FILENAME_BASE}}(props) {",
+      "\treturn (",
+      "\t\t<>",
+      "\t\t\t$0",
+      "\t\t</>",
+      "\t)",
+      "}",
+      "",
+      "export default ${1:${TM_FILENAME_BASE}}",
+      ""
+    ],
+    "description": "Creates a React Functional Component with ES7 module system"
+  },
+  "reactFunctionalComponent": {
+    "prefix": "_syrfc",
+    "body": [
+      "import React from 'react'",
+      "",
+      "export default function ${1:${TM_FILENAME_BASE}}(props) {",
+      "\treturn (",
+      "\t\t<>",
+      "\t\t\t$0",
+      "\t\t</>",
+      "\t)",
+      "}",
+      ""
+    ],
+    "description": "Creates a React Functional Component with ES7 module system"
+  },
+  "reactFunctionalComponentWithPropTypes": {
+    "prefix": "_syrfcp",
+    "body": [
+      "import React from 'react'",
+      "import PropTypes from 'prop-types'",
+      "",
+      "function ${1:${TM_FILENAME_BASE}}(props) {",
+      "\treturn (",
+      "\t\t<>",
+      "\t\t\t$0",
+      "\t\t</>",
+      "\t)",
+      "}",
+      "",
+      "${1:${TM_FILENAME_BASE}}.propTypes = {",
+      "",
+      "}",
+      "",
+      "export default ${1:${TM_FILENAME_BASE}}",
+      "",
+      ""
+    ],
+    "description": "Creates a React Functional Component with ES7 module system with PropTypes"
+  },
+  "reactArrowFunctionExportComponent": {
+    "prefix": "_syrafce",
+    "body": [
+      "import React from 'react'",
+      "",
+      "const ${1:${TM_FILENAME_BASE}} = props => {",
+      "\treturn (",
+      "\t\t<>",
+      "\t\t\t$0",
+      "\t\t</>",
+      "\t)",
+      "}",
+      "",
+      "export default ${1:${TM_FILENAME_BASE}}",
+      ""
+    ],
+    "description": "Creates a React Arrow Function Component with ES7 module system"
+  },
+  "reactArrowFunctionComponent": {
+    "prefix": "_syrafc",
+    "body": [
+      "import React from 'react'",
+      "",
+      "export const ${1:${TM_FILENAME_BASE}} = props => {",
+      "\treturn (",
+      "\t\t<>",
+      "\t\t\t$0",
+      "\t\t</>",
+      "\t)",
+      "}",
+      ""
+    ],
+    "description": "Creates a React Arrow Function Component with ES7 module system"
+  },
+  "reactArrowFunctionComponentWithPropTypes": {
+    "prefix": "_syrafcp",
+    "body": [
+      "import React from 'react'",
+      "import PropTypes from 'prop-types'",
+      "",
+      "const ${1:${TM_FILENAME_BASE}} = props => {",
+      "\treturn (",
+      "\t\t<>",
+      "\t\t\t$0",
+      "\t\t</>",
+      "\t)",
+      "}",
+      "",
+      "${1:${TM_FILENAME_BASE}}.propTypes = {",
+      "",
+      "}",
+      "",
+      "export default ${1:${TM_FILENAME_BASE}}",
+      ""
+    ],
+    "description": "Creates a React Arrow Function Component with ES7 module system with PropTypes"
+  },
+  "reactFunctionMemoComponentWithPropTypes": {
+    "prefix": "_syrmcp",
+    "body": [
+      "import React, { memo } from 'react'",
+      "import PropTypes from 'prop-types'",
+      "",
+      "const ${1:${TM_FILENAME_BASE}} = memo(function ${1:${TM_FILENAME_BASE}}(props) {",
+      "\treturn (",
+      "\t\t<>",
+      "\t\t\t$0",
+      "\t\t</>",
+      "\t)",
+      "})",
+      "",
+      "${1:${TM_FILENAME_BASE}}.propTypes = {",
+      "",
+      "}",
+      "",
+      "export default ${1:${TM_FILENAME_BASE}}",
+      ""
+    ],
+    "description": "Creates a React Memo Function Component with ES7 module system with PropTypes"
+  },
+
+  "reactFunctionalCompomentRedux": {
+    "prefix": "_syrfcx",
+    "body": [
+      "import React, { useEffect } from 'react'",
+      "import { useSelector, useDispatch } from 'react-redux'",
+      "",
+      "import { action } from 'actions'",
+      "",
+      "const ${1:${TM_FILENAME_BASE}} = props => {",
+      "\tconst { selectorName } = useSelector(state => state.selector)",
+      "\tconst dispatch = useDispatch()",
+      "",
+      "useEffect(() => {",
+      "dispatch(action.getAction())",
+      "}, [dispatch])",
+      "",
+      "\treturn (",
+      "\t\t<>",
+      "\t\t\t$0",
+      "\t\t</>",
+      "\t)",
+      "}",
+      "export default ${1:${TM_FILENAME_BASE}}",
+      ""
+    ],
+    "description": "Creates a React functional component with connected redux and ES7 module system"
+  },
+  "reactFunctionalCompomentReduxPropTypes": {
+    "prefix": "_syrfcxp",
+    "body": [
+      "import React, { useEffect } from 'react'",
+      "import PropTypes from 'prop-types'",
+      "import { useSelector, useDispatch } from 'react-redux'",
+      "",
+      "const ${1:${TM_FILENAME_BASE}} = props => {",
+      "\tconst { something } = useSelector(state => state.something)",
+      "\tconst dispatch = useDispatch()",
+      "",
+      "useEffect(() => {",
+      "dispatch(something.getSomething())",
+      "}, [dispatch])",
+      "",
+      "\treturn (",
+      "\t\t<>",
+      "\t\t\t$0",
+      "\t\t</>",
+      "\t)",
+      "}",
+      "",
+      "${1:${TM_FILENAME_BASE}}.propTypes = {",
+      "\t${2:prop}: ${3:PropTypes}",
+      "}",
+      "export default ${1:${TM_FILENAME_BASE}}",
+      ""
+    ],
+    "description": "Creates a React functional component with PropTypes with connected redux and ES7 module system"
+  },
+  "reduxAction": {
+    "prefix": "_syrxaction",
+    "body": [
+      "export const ${1:actionName} = (type, payload) => ({",
+      "\ttype,",
+      "\tpayload",
+      "})",
+      ""
+    ],
+    "description": "Create a redux action"
+  },
+  "reduxActionWithAPI": {
+    "prefix": "_syrxactionapi",
+    "body": [
+      "import * as types from 'store/types'",
+      "import serviceController, { routes } from 'controller'",
+      "import { ToDoRequest, ToDoSuccess, ToDoError } from './typehandle.action'",
+      "",
+
+      "const ${1:actionName} = lang => async dispatch => {",
+      "\tdispatch(ToDoRequest(types.${1:actionName}_REQUEST))",
+      "\treturn await serviceController(`${routes.${1:actionName}}`)",
+      "\t\t.then(res => {",
+      "\t\t\tif (res.data.error) {",
+      "\t\t\t\tconsole.log(res.data)",
+      "\t\t\t} else {",
+      "\t\t\t\tdispatch(ToDoSuccess(types.${1:actionName}_SUCCESS, res.data))",
+      "\t\t\t}",
+      "\t\t})",
+      "\t\t.catch(error => dispatch(ToDoError(types.${1:actionName}_ERROR, error.message)))",
+      "}",
+      "",
+      "export default {",
+      "\t${1:actionName}",
+      "}"
+    ],
+    "description": "Create a redux action API Reference"
+  },
+  "reduxReducer": {
+    "prefix": "_syrxreducer",
+    "body": [
+      "const initialState = {",
+      "",
+      "const initialState = {",
+      "\t${1:payload_data}: null",
+      "}",
+      "",
+      "}",
+      "",
+      "export default (state = initialState, action) => {",
+      "\tswitch (action.type) {",
+      "",
+      "\tcase '${1:TYPE_KEY}':",
+      "\t\treturn { ...state, ${1:payload_data}: ...action.payload }",
+      "",
+      "\tdefault:",
+      "\t\treturn state",
+      "\t}",
+      "}",
+      ""
+    ],
+    "description": "Create a redux reducer"
+  },
+  "reduxReducerApi": {
+    "prefix": "_syrxreducerapi",
+    "body": [
+      "import * as types from 'store/types'",
+      "",
+      "const initialState = {",
+      "\terror: null,",
+      "\tisLoading: false,",
+      "\tpayload_data: null",
+      "}",
+      "",
+      "export default (state = initialState, action) => {",
+      "\tswitch (action.type) {",
+      "\t\tcase types.${1:typeName}_REQUEST: // ${1:typeName}",
+      "\t\t\treturn {",
+      "\t\t\t\t...state,",
+      "\t\t\t\tisLoading: true",
+      "\t\t\t}",
+      "\t\tcase types.${1:typeName}_SUCCESS:",
+      "\t\t\treturn {",
+      "\t\t\t\t...state,",
+      "\t\t\t\tisLoading: false,",
+      "\t\t\t\tpayload_data: action.data",
+      "\t\t\t}",
+      "\t\tcase types.${1:typeName}_ERROR:",
+      "\t\t\treturn {",
+      "\t\t\t\t...state,",
+      "\t\t\t\tisLoading: false,",
+      "\t\t\t\terror: action.error",
+      "\t\t\t}",
+      "\t\tdefault:",
+      "\t\t\treturn state",
+      "\t}",
+      "}"
+    ],
+    "description": "Create a redux reducer API Reference"
+  },
+  "reactReduxReducerIndex": {
+    "prefix": "_syrxmiddleware",
+    "body": [
+      "import { createStore, applyMiddleware, compose } from 'redux'",
+      "import thunk from 'redux-thunk'",
+      "",
+      "import rootReducer from './root.reducer'",
+      "",
+      "const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose",
+      "export default createStore(",
+      "\trootReducer,",
+      "\tcomposeEnhancers(applyMiddleware(thunk))",
+      ")"
+    ],
+  },
+  "reactReduxReducerRoot": {
+    "prefix": "_syrxcombine",
+    "body": [
+      "import { combineReducers } from 'redux'",
+      "import ${1:reducerName} from './${1:reducerName}.reducer'",
+      "",
+      "export default combineReducers({",
+      "\t${1:reducerName},",
+      "})"
+    ],
+    "description": "The combineReducers helper function turns an object whose values are different reducing functions into a single reducing function you can pass to createStore."
+  },
+
+  "createContext": {
+    "prefix": "_syrct",
+    "body": ["const ${1:contextName} = React.createContext()", ""],
+    "description": "Create React context"
+  },
+  "createRef": {
+    "prefix": "_syfref",
+    "body": ["const ${1:refName}Ref = React.createRef()", ""],
+    "description": "Create ref statement used inside constructor"
+  },
+  "commentBigBlock": {
+    "prefix": "_sycmb",
+    "body": ["/**", " * ${0}", " */"],
+    "description": "Comment Big Block"
+  }
+}

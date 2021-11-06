@@ -1,0 +1,30 @@
+{
+    "name": "knn-snippets",
+    "displayName": "knn-snippets",
+    "description": "React Redux snippet generator",
+    "version": "1.0.0",
+    "icon": "brackets.png",
+    "publisher": "knn",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/KyawNyeinNaing/knn-snippets.git"
+    },
+    "engines": {
+        "vscode": "^1.62.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "javascript",
+                "path": "./snippets/snippets.code-snippets"
+            },
+            {
+                "language": "javascriptreact",
+                "path": "./snippets/snippets.code-snippets"
+            }
+        ]
+    }
+}
