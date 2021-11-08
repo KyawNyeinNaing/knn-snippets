@@ -146,6 +146,9 @@ export default $1;
 
 ## Release Notes
 
+## [1.1.0]
+ Minor changes
+
 ### 1.0.0
 
 Initial release of
