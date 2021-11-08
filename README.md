@@ -5,6 +5,12 @@
 - JavaScript (.js)
 - JavaScript React (.jsx)
 
+## installation
+Launch VS Code Quick Open (Ctrl+P), paste the following command, and press enter.
+```
+  ext install knn.knn-snippets
+```
+
 **Snippets are found below.**
 
 → Denotes the `TAB` key.
