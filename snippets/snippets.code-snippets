@@ -310,7 +310,7 @@
       "export const FetchRequest = (type, data) => ({",
       "\ttype,",
       "\tdata",
-      "}",
+      "})",
       "",
       "export const FetchRequest = (type, error) => ({",
       "\ttype,",

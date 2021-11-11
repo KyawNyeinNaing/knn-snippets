@@ -150,6 +150,10 @@ export default $1;
 
 ## Release Notes
 
+## [1.1.12]
+
+Minor changes (Fixed type handle)
+
 ## [1.1.1]
 
 - Change `_syrxactionApi` to `_syrxactionget`
