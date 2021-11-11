@@ -2,7 +2,7 @@
 	"name": "knn-snippets",
 	"displayName": "knn-snippets",
 	"description": "React Redux snippet generator",
-	"version": "1.1.1",
+	"version": "1.1.12",
 	"icon": "brackets.png",
 	"publisher": "knn",
 	"repository": {
