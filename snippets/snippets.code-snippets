@@ -65,7 +65,6 @@
       ""
     ]
   },
-
   "reactFunctionalExportComponent": {
     "prefix": "_syrfce",
     "body": [
@@ -274,24 +273,24 @@
     "description": "Create a redux action"
   },
   "reduxActionWithAPI": {
-    "prefix": "_syrxactionapi",
+    "prefix": "_syrxactionget",
     "body": [
-      "import * as types from 'store/types'",
-      "import serviceController, { routes } from 'controller'",
-      "import { ToDoRequest, ToDoSuccess, ToDoError } from './typehandle.action'",
+      "import axios from 'axios'",
+      "import * as types from '../types'",
+      "import { FetchRequest, FetchSuccess, FetchError } from './typehandle.action'",
       "",
 
-      "const ${1:actionName} = lang => async dispatch => {",
-      "\tdispatch(ToDoRequest(types.${1:actionName}_REQUEST))",
-      "\treturn await serviceController(`${routes.${1:actionName}}`)",
+      "const ${1:actionName} = () => async dispatch => {",
+      "\tdispatch(FetchRequest(types.${1:actionName}_REQUEST))",
+      "\treturn await axios.get('')",
       "\t\t.then(res => {",
       "\t\t\tif (res.data.error) {",
       "\t\t\t\tconsole.log(res.data)",
       "\t\t\t} else {",
-      "\t\t\t\tdispatch(ToDoSuccess(types.${1:actionName}_SUCCESS, res.data))",
+      "\t\t\t\tdispatch(FetchSuccess(types.${1:actionName}_SUCCESS, res.data))",
       "\t\t\t}",
       "\t\t})",
-      "\t\t.catch(error => dispatch(ToDoError(types.${1:actionName}_ERROR, error.message)))",
+      "\t\t.catch(error => dispatch(FetchError(types.${1:actionName}_ERROR, error.message)))",
       "}",
       "",
       "export default {",
@@ -300,6 +299,39 @@
     ],
     "description": "Create a redux action API Reference"
   },
+
+  "reduxTypeHandleAction": {
+    "prefix": "_syrxtypehandle",
+    "body": [
+      "export const FetchRequest = type => ({",
+      "\ttype",
+      "})",
+      "",
+      "export const FetchRequest = (type, data) => ({",
+      "\ttype,",
+      "\tdata",
+      "}",
+      "",
+      "export const FetchRequest = (type, error) => ({",
+      "\ttype,",
+      "\terror",
+      "})",
+      ""
+    ],
+    "description": "Create a redux type handle action"
+  },
+
+  "reduxTypes": {
+    "prefix": "_syrxtypes",
+    "body": [
+      "export const ${1:TYPE}_REQUEST = '${1:TYPE}_REQUEST'",
+      "export const ${1:TYPE}_SUCCESS = '${1:TYPE}_SUCCESS'",
+      "export const ${1:TYPE}_ERROR = '${1:TYPE}_ERROR'",
+      "",
+    ],
+    "description": "Create redux types"
+  },
+
   "reduxReducer": {
     "prefix": "_syrxreducer",
     "body": [
@@ -328,7 +360,7 @@
   "reduxReducerApi": {
     "prefix": "_syrxreducerapi",
     "body": [
-      "import * as types from 'store/types'",
+      "import * as types from '../types'",
       "",
       "const initialState = {",
       "\terror: null,",
@@ -375,7 +407,7 @@
       "\trootReducer,",
       "\tcomposeEnhancers(applyMiddleware(thunk))",
       ")"
-    ],
+    ]
   },
   "reactReduxReducerRoot": {
     "prefix": "_syrxcombine",

@@ -2,6 +2,11 @@
 
 All info about changes
 
+## [1.1.1]
+ - Change `_syrxactionapi` to `_syrxactionget`
+ - Add `_syrxtypes` redux types for snippets
+ - Add `_syrxtypehandle` redux type handle for snippets
+
 ## [1.1.0]
  Minor changes
  

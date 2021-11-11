@@ -6,7 +6,9 @@
 - JavaScript React (.jsx)
 
 ## installation
+
 Launch VS Code Quick Open (Ctrl+P), paste the following command, and press enter.
+
 ```
   ext install knn.knn-snippets
 ```
@@ -47,8 +49,10 @@ Launch VS Code Quick Open (Ctrl+P), paste the following command, and press enter
 | -----------------: | ------------------------------------------------------------------------------------------------ |
 |         `_syrfcx→` | `Creates a React functional component with connected redux and ES7 module system`                |
 |        `_syrfcxp→` | `Creates a React functional component with PropTypes with connected redux and ES7 module system` |
+|      `_syrxtypes→` | `Create redux types`                                                            |
+| `_syrxtypehandle→` | `Create redux type handle`                                                            |
 |     `_syrxaction→` | `Create a redux action`                                                                          |
-|  `_syrxactionapi→` | `Create a redux action API Reference`                                                            |
+|   `_syrxactionget` | `Create a redux action API Reference`                                                            |
 |    `_syrxreducer→` | `Create a redux reducer`                                                                         |
 | `_syrxreducerapi→` | `Create a redux reducer API Reference`                                                           |
 | `_syrxmiddleware→` | `applyMiddleware(...middleware)`                                                                 |
@@ -146,13 +150,21 @@ export default $1;
 
 ## Release Notes
 
+## [1.1.1]
+
+- Change `_syrxactionApi` to `_syrxactionget`
+- Add `_syrxtypes` redux types for snippets
+- Add `_syrxtypehandle` redux type handle for snippets
+
 ## [1.1.0]
- Minor changes
+
+Minor changes
 
 ### 1.0.0
 
 Initial release of
- - Redux snippets
- - React components snippets
- - Import and functions snippets
- - PropTypes snippets
+
+- Redux snippets
+- React components snippets
+- Import and functions snippets
+- PropTypes snippets
