@@ -150,6 +150,14 @@ export default $1;
 
 ## Release Notes
 
+## [2.0.0]
+
+- Update middleware with logger
+- Fixed redux action type handle snippets
+- Fixed redux reducer snippets
+- Fixed es6 module export warning
+- Fixed react functional component redux snippets
+
 ## [1.1.12]
 
 Minor changes (Fixed type handle)
